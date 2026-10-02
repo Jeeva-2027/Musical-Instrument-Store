@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Villa Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">Musical Instrument Store</div>
+        <nav>
+            <ul>
+                <!-- Linked to unique ID anchors on the page -->
+                <li><a href="#new-gear">New Gear</a></li>
+                <li><a href="#used-gear">Used Gear</a></li>
+                <li><a href="#lessons">Lessons</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon" id="cartBtn">🛒 Cart (<span id="cartCount">0</span>)</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Find Your Sound</h1>
+        <p>Premium guitars, amps, and expert advice.</p>
+        <a href="#new-gear" class="btn">Shop New Arrivals</a>
+    </section>
+
+    <!-- 1. New Gear Section -->
+    <section id="new-gear" class="site-section">
+        <h2>Featured New Gear</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">🎸</div>
+                <h3>Acoustic Guitar</h3>
+                <p class="price">$799.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🎸</div>
+                <h3>Electric Guitar</h3>
+                <p class="price">$1,249.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🔊</div>
+                <h3>Tube Amplifier</h3>
+                <p class="price">$450.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Used Gear Section -->
+    <section id="used-gear" class="site-section alternate-bg">
+        <h2>Pre-Owned & Vintage Gear</h2>
+        <p class="section-intro">Save big on fully inspected, high-quality vintage instruments.</p>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">🎸</div>
+                <h3>Vintage 1974 Strat</h3>
+                <p class="price">$2,100.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">🎸</div>
+                <h3>Used Custom Acoustic</h3>
+                <p class="price">$550.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Lessons Section -->
+    <section id="lessons" class="site-section">
+        <h2>Music Lessons</h2>
+        <p class="section-intro">Learn from the best. We offer expert 1-on-1 guitar, bass, and drum instruction.</p>
+        <div class="lessons-container">
+            <div class="lesson-card">
+                <h3>Beginner Guitar Course</h3>
+                <p>Master your chords, strumming patterns, and basic music theory.</p>
+                <span class="price">$40 / hr</span>
+            </div>
+            <div class="lesson-card">
+                <h3>Advanced Rock & Blues</h3>
+                <p>Unlock complex scales, solo strategies, and improvisational skills.</p>
+                <span class="price">$50 / hr</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Contact Section -->
+    <section id="contact" class="site-section alternate-bg">
+        <h2>Contact Our Shop</h2>
+        <p class="section-intro">Have questions about an instrument? Get in touch with our experts.</p>
+        <form id="contactForm" class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email Address" required>
+            <textarea rows="5" placeholder="How can we help you?" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Newsletter Footer -->
+    <footer>
+        <div class="newsletter">
+            <h3>Join the Insider Club</h3>
+            <p>Sign up for weekly deals and exclusive gear drops.</p>
+            <form id="newsletterForm">
+                <input type="email" id="emailInput" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="formMessage" class="hidden"></p>
+        </div>
+    </footer>
+
+    <!-- Hidden Cart Popup Overlay -->
+    <div id="cartModal" class="cart-modal hidden-modal">
+        <div class="cart-content">
+            <span class="close-modal" id="closeCartBtn">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <ul id="cartItemsList"></ul>
+            <div class="cart-summary">
+                <p>Total Items: <span id="modalCartCount">0</span></p>
+                <button class="btn checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
